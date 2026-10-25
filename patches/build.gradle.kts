@@ -1,14 +1,13 @@
-group = "app.template"
+group = "vipulog"
 
 patches {
-    // TODO: Update this section with your project details.
     about {
-        name = "UserXYZ Patches"
-        description = "Patches for apps I like"
-        source = "git@github.com:UserXYZ/morphe-patches.git"
-        author = "Awesome dev"
+        name = "ezykam-patches"
+        description = "Morphe patches for CP ezyKam+"
+        source = "git@github.com:vipulog/ezykam-patches.git"
+        author = "vipulog"
         contact = "na"
-        website = "na"
+        website = "https://github.com/vipulog/ezykam-patches"
         license = "GPLv3"
     }
 }

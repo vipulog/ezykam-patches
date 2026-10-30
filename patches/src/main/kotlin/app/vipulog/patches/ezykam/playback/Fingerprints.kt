@@ -37,6 +37,21 @@ internal object Fingerprints {
     const val CAMERA_PLAYBACK_FRAGMENT_CLASS =
         "Lcom/thingclips/smart/ipc/camera/panel/ui/playback/fragment/CameraPlayBackFragment;"
 
+    const val FRAGMENT_END_CALLBACK_CLASS =
+        "Lcom/thingclips/smart/camera/panelimpl/playback/model/PlayBackPanelModel\$17\$2;"
+
+    const val PLAYBACK_PANEL_PRESENTER_CLASS =
+        "Lcom/thingclips/smart/camera/panelimpl/playback/presenter/PlayBackPanelPresenter;"
+
+    const val NEXT_TIME_PIECE_OBSERVER_CLASS =
+        "Lcom/thingclips/smart/camera/panelimpl/playback/presenter/PlayBackPanelPresenter\$12;"
+
+    const val TIME_PIECE_BEAN_CLASS =
+        "Lcom/thingclips/smart/camera/middleware/cloud/bean/TimePieceBean;"
+
+    const val RX_RESULT_CLASS =
+        "Lcom/thingclips/smart/asynclib/rx/data/Result;"
+
     const val TEXT_VIEW_CLASS =
         "Landroid/widget/TextView;"
 
@@ -106,5 +121,60 @@ internal object Fingerprints {
         name = "onPlayBackSpeed",
         returnType = "V",
         parameters = listOf(PLAY_VIDEO_SPEED_CLASS),
+    )
+
+    /**
+     * Controls whether the playback controller automatically searches for and advances to
+     * the next contiguous recording fragment on the SD card when a clip ends.
+     */
+    val AutoSeekNextSegmentFingerprint = Fingerprint(
+        definingClass = PLAYBACK_PANEL_MODEL_CLASS,
+        name = "isAutoSeekNextTimeSegment",
+        returnType = "Z",
+    )
+
+    /**
+     * Async callback invoked when playback of a media fragment completes on the device.
+     */
+    val FragmentEndCallbackFingerprint = Fingerprint(
+        definingClass = FRAGMENT_END_CALLBACK_CLASS,
+        name = "onSuccess",
+        returnType = "V",
+        parameters = listOf("I", "I", "Ljava/lang/String;"),
+        filters = listOf(string("FragmentEnd")),
+    )
+
+    /**
+     * Presenter method called on frame timestamp advances, evaluating whether to trigger
+     * playback of the subsequent time segment.
+     */
+    val FrameInfoAdvanceFingerprint = Fingerprint(
+        definingClass = PLAYBACK_PANEL_PRESENTER_CLASS,
+        name = "j",
+        returnType = "V",
+        parameters = listOf("J"),
+        filters = listOf(string("playNextPiece ignore when timestamp changed & SupportPlayMode")),
+    )
+
+    /**
+     * Method responsible for initiating playback of a specific time segment bean.
+     */
+    val PlaybackStartVideoFingerprint = Fingerprint(
+        definingClass = PLAYBACK_PANEL_PRESENTER_CLASS,
+        name = "u0",
+        returnType = "V",
+        parameters = listOf(TIME_PIECE_BEAN_CLASS),
+        filters = listOf(string("startPlayVideo: timePieceBean playtime same cancel:")),
+    )
+
+    /**
+     * RxJava observer receiving the next contiguous recording piece query result.
+     */
+    val NextTimePieceObserverFingerprint = Fingerprint(
+        definingClass = NEXT_TIME_PIECE_OBSERVER_CLASS,
+        name = "a",
+        returnType = "V",
+        parameters = listOf(RX_RESULT_CLASS),
+        filters = listOf(string("getNextTimePrice: ")),
     )
 }

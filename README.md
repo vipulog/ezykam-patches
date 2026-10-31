@@ -12,13 +12,22 @@ https://morphe.software/add-source?github=vipulog/ezykam-patches
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
+> **[v1.0.0-dev.1](https://github.com/vipulog/ezykam-patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+<details open>
+<summary>📦 CP ezyKam+&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
+<br>
 
-<!-- Do not modify this section by hand. The patch list is generated when release.yml creates a new release.
+**🎯 Supported versions:**
 
-     If you wish for the patches list to be collapsed, then remove the word 'EXPANDED' from the comment tag above.
+| 4.1.4 |
+| :---: |
 
-     If you wish to manually keep this list updated then remove the PATCHES_START and PATCHES_END
-     comment blocks entirely. -->
+| 💊&nbsp;Patch | 📜&nbsp;Description | ⚙️&nbsp;Options |
+|----------|----------------|-----------|
+| [Add 4x playback speed](#add-4x-playback-speed) | Adds 4x fast-forward speed option to camera SD card playback. |  |
+| [Fix playback freeze at clip boundaries](#fix-playback-freeze-at-clip-boundaries) | Fixes SD card playback freezing at clip ends by auto-advancing to consecutive fragments. |  |
+
+</details>
 
 <!-- PATCHES_END -->
 

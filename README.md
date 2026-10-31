@@ -12,7 +12,7 @@ https://morphe.software/add-source?github=vipulog/ezykam-patches
 ## 🩹 Patches list
 
 <!-- PATCHES_START EXPANDED -->
-> **[v1.0.0-dev.1](https://github.com/vipulog/ezykam-patches/releases/tag/v1.0.0-dev.1)**&nbsp;&nbsp;•&nbsp;&nbsp;`dev`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
+> **[v1.0.0](https://github.com/vipulog/ezykam-patches/releases/tag/v1.0.0)**&nbsp;&nbsp;•&nbsp;&nbsp;`main`&nbsp;&nbsp;•&nbsp;&nbsp;2 patches total
 <details open>
 <summary>📦 CP ezyKam+&nbsp;&nbsp;•&nbsp;&nbsp;2 patches</summary>
 <br>

@@ -4,7 +4,7 @@ Patches for CP ezyKam+, handcrafted by vibes, assembled by AI, and reviewed by
 absolutely nobody (as God intended). If it works, it's a feature. If it breaks,
 it's a learning experience.
 
-### How to use these patches
+## How to use these patches
 
 Click here to add these patches to Morphe:
 https://morphe.software/add-source?github=vipulog/ezykam-patches
@@ -31,7 +31,7 @@ https://morphe.software/add-source?github=vipulog/ezykam-patches
 
 <!-- PATCHES_END -->
 
-### 🛠️ Building locally
+## 🛠️ Building locally
 
 - Run `./gradlew buildAndroid`
 - The built patches .mpp file is found in `patches/build/libs/patches-*.mpp`
